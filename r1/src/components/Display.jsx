@@ -1,5 +1,6 @@
 import bgFront from '../components/images/bg-card-front.png';
-import bgBack from '../components//images/bg-card-back.png';
+import bgBack from '../components/images/bg-card-back.png';
+
 
 function Display() {
     return(
