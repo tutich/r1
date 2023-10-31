@@ -1,7 +1,12 @@
-import bgFront from './components/images/bg-card-front.png';
+import bgFront from '../components/images/bg-card-front.png';
+import bgBack from '../components//images/bg-card-back.png';
+
 function Display() {
     return(
-        <img src={bgFront} alt={bgFront}/>
+        <div className="img">
+            <img src={bgFront} alt={bgFront}/>
+            <img src={bgBack} alt={bgBack}/>
+        </div>
 
     )
 }
