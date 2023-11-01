@@ -24,7 +24,7 @@ function Form() {
                             </div>
                             
                         </div>
-                        <div className="cvv">
+                        <div className="cvt">
                             <label htmlFor='name'>cvc</label>
                             <input type='text' placeholder='e.g. 123' className="cvc"/>
                         </div>

@@ -44,8 +44,9 @@ body {
   grid-auto-flow: row;
   justify-content: space-between;
 }
-.form {
-
+label{
+font-size: 10px;
+padding-bottom: 8px;
 }
 .front {
   padding-bottom: 3rem;
@@ -56,15 +57,22 @@ body {
 }
 .form {
   margin-top: 5rem;
+  padding-right: 3rem;
 }
 input {
   width: 250px;
+  height: 35px;
+  border-radius: 8px;
+  padding: 8px;
+  color: linear-gradient(hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+  border-color: aliceblue;
 }
 .exp{
   width: 70px;
 }
 .year{
   display: flex;
+  
 }
 .mon {
   display: flex;
@@ -72,10 +80,26 @@ input {
 }
 .cvc{
   width: 120px;
+  
 }
 
 .btn{
-  padding-top: 5rem;
+  padding-top: 3rem;
   text-align: center;
-  width: 250px;
+}
+button {
+  width: 300px;
+  height: 35px;
+  font: inherit;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+button:hover{
+  transform: scale(1.1);
+}
+.cvt {
+  display: grid;
+  grid-auto-flow: row;
 }
