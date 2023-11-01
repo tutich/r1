@@ -12,21 +12,27 @@ function Form() {
                     <input type='text' placeholder='e.g. 1234 5678 9123 0000'/>
                 </div>
                 <div class="inp">
-                    <div class="inps">
-                        <div class="">
-                            <label htmlFor='name'>EXP. DATE (MM/YY )</label>
-                            <input type='text' placeholder='MM'/>
+                    <div class="inps" >
+                        <div className="year">
+                            <div className="cvv" >
+                                
+                                    <label htmlFor='name'>EXP. DATE (MM/YY )</label>
+                                <div className="mon">
+                                    <input type='text' placeholder='MM' className="exp"/>
+                                    <input type='text' placeholder='YY' className="exp"/>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div class=""><input type='text' placeholder='YY'/></div>
-                        <div class="">
+                        <div className="cvv">
                             <label htmlFor='name'>cvc</label>
-                            <input type='text' placeholder='e.g. 123'/>
+                            <input type='text' placeholder='e.g. 123' className="cvc"/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <button>Confirm</button>
+            <div className="btn">
+                <button >Confirm</button>
             </div>
         </div>
     )

@@ -11,6 +11,8 @@ body {
   font-size: 18px;
   background-image: url("../src/components/images/bg-main-desktop.png");
   background-repeat: no-repeat;
+  padding: 15px;
+  margin: 3.5rem;
 }
 
 .img{
@@ -20,6 +22,7 @@ body {
 }
 .container {
   display: flex;
+  justify-content: space-between;
 }
 .inputs {
   display: grid;
@@ -28,7 +31,51 @@ body {
 .inp {
   display: grid;
   grid-auto-flow: row;
+  padding: 12px;
 }
 .inps {
+   display: grid;
+   grid-auto-flow: column;
+   justify-content: space-between;
+   
+} 
+.cvv{
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: space-between;
+}
+.form {
+
+}
+.front {
+  padding-bottom: 3rem;
+  padding-left: 7rem;
+}
+.back {
+  padding-left: 14rem;
+}
+.form {
+  margin-top: 5rem;
+}
+input {
+  width: 250px;
+}
+.exp{
+  width: 70px;
+}
+.year{
   display: flex;
+}
+.mon {
+  display: flex;
+  justify-content: space-between;
+}
+.cvc{
+  width: 120px;
+}
+
+.btn{
+  padding-top: 5rem;
+  text-align: center;
+  width: 250px;
 }
