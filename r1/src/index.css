@@ -103,3 +103,18 @@ button:hover{
   display: grid;
   grid-auto-flow: row;
 }
+.feedback {
+  text-align: center;
+  font: inherit;
+  padding: 10px;
+  display: none;
+}
+.feedback h3 {
+  font-weight: 500;
+  padding: 10px;
+}
+.para {
+  font-size: 12px;
+  padding-bottom: 2rem;
+  color: darkgray;
+}

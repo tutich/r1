@@ -1,3 +1,4 @@
+import complete from '../components/images/icon-complete.svg';
 
 function Form() {
     return(
@@ -34,6 +35,17 @@ function Form() {
             <div className="btn">
                 <button >Confirm</button>
             </div>
+
+          <div className="feedback">
+            <img src={complete} alt='icon'/>
+            <h3>THANK YOU!</h3>
+            <p className="para">we've added your card details</p>
+            <div>
+                <button>Continue</button>
+            </div>
+          </div>
+
+
         </div>
     )
 }
