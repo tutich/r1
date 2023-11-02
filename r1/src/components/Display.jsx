@@ -17,7 +17,13 @@ function Display() {
                 </div>
 
             </article>
-            <img src={bgBack} alt={bgBack} className="back"/>
+
+            <article>
+                <img src={bgBack} alt={bgBack} className="back"/>
+                <div>
+                <span className='numbe'>123</span>
+                </div>
+            </article>
         </div>
 
     )
