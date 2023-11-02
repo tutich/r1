@@ -51,6 +51,7 @@ padding-bottom: 8px;
 .front {
   padding-bottom: 3rem;
   padding-left: 7rem;
+  z-index: 2;
 }
 .back {
   padding-left: 14rem;
@@ -117,4 +118,41 @@ button:hover{
   font-size: 12px;
   padding-bottom: 2rem;
   color: darkgray;
+}
+.img-container {
+  position: relative;
+}
+.logo {
+  position: absolute;
+  z-index: 1;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: hsl(0, 0%, 100%);
+  font: inherit;
+  font-weight: 200;
+  font-size: 15px;
+}
+.content h2 {
+  font-weight: 300;
+  font: inherit;
+  padding-inline: 3px;
+}
+/* .numb::before {
+  content: "\00a0";
+}
+.numb::after {
+  content: "\00a0";
+}
+.numb span {
+  display: inline-block;
+    padding: 0 5px;
+} */
+ul {
+  display: flex;
+  justify-content: space-between;
 }
