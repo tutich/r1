@@ -136,6 +136,7 @@ button:hover{
   font: inherit;
   font-weight: 200;
   font-size: 15px;
+  
 }
 .content h2 {
   font-weight: 300;
@@ -155,4 +156,8 @@ button:hover{
 ul {
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
+}
+li {
+  list-style-type: none;
 }

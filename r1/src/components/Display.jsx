@@ -12,7 +12,7 @@ function Display() {
                     <h2 className="numb">1234 5678 9012 3456</h2>
                     <ul className=''>
                         <li>Peter Koinange</li>
-                        <>00/00</>
+                        <li>00/00</li>
                     </ul>
                 </div>
 
