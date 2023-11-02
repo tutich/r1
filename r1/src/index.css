@@ -163,7 +163,10 @@ li {
 }
 .numbe {
   position: absolute;
-  top: 50%;
+  top: 30.5rem;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: hsl(0, 0%, 100%);
+  font: inherit;
+  font-size: 12px;
 }
