@@ -19,7 +19,7 @@ function Form() {
                                 
                                     <label htmlFor='name'>EXP. DATE (MM/YY )</label>
                                 <div className="mon">
-                                    <input type='text' placeholder='MM' className="exp"/>
+                                    <input onInput={} type='text' placeholder='MM' className="exp"/>
                                     <input type='text' placeholder='YY' className="exp"/>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ function Form() {
                 </div>
             </div>
             <div className="btn">
-                <button >Confirm</button>
+                <button onClick="">Confirm</button>
             </div>
 
           <div className="feedback">
