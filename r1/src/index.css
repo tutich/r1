@@ -199,9 +199,10 @@ li {
 }
 
 @media screen and(max-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+   
   }
 }
