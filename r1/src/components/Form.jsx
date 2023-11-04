@@ -1,6 +1,6 @@
 import complete from '../components/images/icon-complete.svg';
 
-function Form() {
+function Form({handleConfirmClick, isHidden}) {
     return(
         <div className="form">
             <div className="inputs">
@@ -19,7 +19,7 @@ function Form() {
                                 
                                     <label htmlFor='name'>EXP. DATE (MM/YY )</label>
                                 <div className="mon">
-                                    <input onInput={} type='text' placeholder='MM' className="exp"/>
+                                    <input type='text' placeholder='MM' className="exp"/>
                                     <input type='text' placeholder='YY' className="exp"/>
                                 </div>
                             </div>
@@ -33,18 +33,17 @@ function Form() {
                 </div>
             </div>
             <div className="btn">
-                <button onClick="">Confirm</button>
+                <button onClick={handleConfirmClick}>Confirm</button>
             </div>
 
-          <div className="feedback">
+          {isHidden ? (<div className="feedback">
             <img src={complete} alt='icon'/>
             <h3>THANK YOU!</h3>
             <p className="para">we've added your card details</p>
             <div>
                 <button>Continue</button>
             </div>
-          </div>
-
+          </div>) : null}
 
         </div>
     )

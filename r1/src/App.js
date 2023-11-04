@@ -9,12 +9,20 @@ import Form from './components/Form';
 function App() {
  const [name, setName] = useState("");
  const [number, setNumber] = useState("");
+ const [isHidden, setIsHidden] = useState(false);
+
+ const handleConfirmClick = () => {
+  setIsHidden(true);
+ };
 
   return (
     <div className="cont">
       <div className="container">
         <Display/>
-        <Form/>
+        <Form
+        isHidden={isHidden}
+        handleConfirmClick={handleConfirmClick}
+        />
       </div>
     </div>
   );
