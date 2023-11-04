@@ -22,6 +22,7 @@ function App() {
         <Form
         isHidden={isHidden}
         handleConfirmClick={handleConfirmClick}
+        setIsHidden={setIsHidden}
         />
       </div>
     </div>
