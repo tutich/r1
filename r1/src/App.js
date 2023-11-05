@@ -15,6 +15,7 @@ function App() {
 
  const handleInputChange1 = (e) => {
   setInputValue(e.target.value);
+  
 };
 
 const handleInputChange2 = (e) => {
@@ -25,7 +26,8 @@ const handleInputChange2 = (e) => {
 
  const handleInputChange = (e) => {
   const value = e.target.value;
- 
+  setName(e.target.value);
+  // setInputValue(e.target.value);
   
 
   if (value === inputValue) {
@@ -57,11 +59,14 @@ const handleInputChange2 = (e) => {
         setIsHidden={setIsHidden}
         error={error}
         inputValue={inputValue}
+        setInputValue={setInputValue}
         handleInputChange={handleInputChange}
         setError={setError}
         number={number}
         handleInputChange1={handleInputChange1}
         handleInputChange2={handleInputChange2}
+        name={name}
+        setNumber={setNumber}
         />
       </div>
     </div>

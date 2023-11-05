@@ -1,12 +1,13 @@
+import { name } from 'tar/lib/types';
 import complete from '../components/images/icon-complete.svg';
 
-function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, error, handleInputChange,setNumber, number, handleInputChange1, handleInputChange2}) {
+function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, setInputValue, error, handleInputChange,setNumber, number,  handleInputChange1, handleInputChange2, name}) {
     return(
         <div className="form">
             {!isHidden &&<><div className="inputs">
                 <div class="inp">
                     <label htmlFor='name'>CARDHOLDER NAME</label>
-                    <input name="cardholder" type='text' placeholder='e.g. Jane Appleseed' value={inputValue} onChange={handleInputChange} onInput={handleInputChange1}/>
+                    <input name="cardholder" type='text' placeholder='e.g. Jane Appleseed' value={name} onChange={handleInputChange} onInput={handleInputChange1}/>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div>
                 <div class="inp">
@@ -15,7 +16,7 @@ function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, error, han
                       .replace(/\s/g, "")
                       .replace(/(\d{4})/g, "$1 ")
                       .trim()}
-                    onChange={(e) => setNumber(e.target.value)} onChange={handleInputChange} onInput={handleInputChange2} />
+                    onChange={(e) => setNumber(e.target.value)}  onInput={handleInputChange2} />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div>
                 <div class="inp">
