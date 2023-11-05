@@ -1,16 +1,18 @@
 import complete from '../components/images/icon-complete.svg';
 
-function Form({handleConfirmClick, isHidden, setIsHidden}) {
+function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, error, handleInputChange,number}) {
     return(
         <div className="form">
             {!isHidden &&<><div className="inputs">
                 <div class="inp">
                     <label htmlFor='name'>CARDHOLDER NAME</label>
-                    <input type='text' placeholder='e.g. Jane Appleseed' />
+                    <input name="cardholder" type='text' placeholder='e.g. Jane Appleseed' value={inputValue} onChange={handleInputChange}/>
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div>
                 <div class="inp">
                     <label htmlFor='name'>CARD NUMBER</label>
-                    <input type='text' placeholder='e.g. 1234 5678 9123 0000' />
+                    <input name='cardholder' type='text' placeholder='e.g. 1234 5678 9123 0000' value={number} onChange={handleInputChange} />
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div>
                 <div class="inp">
                     <div class="inps">

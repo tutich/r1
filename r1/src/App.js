@@ -17,8 +17,9 @@ function App() {
  const handleInputChange = (e) => {
   const value = e.target.value;
   setInputValue(value);
+  setNumber(value);
 
-  // Validate the input (e.g., check if it's empty)
+  
   if (value.trim() === '') {
     setError('Input cannot be empty.');
   } else {
@@ -33,10 +34,16 @@ function App() {
     <div className="cont">
       <div className="container">
         <Display/>
+        
         <Form
         isHidden={isHidden}
         handleConfirmClick={handleConfirmClick}
         setIsHidden={setIsHidden}
+        error={error}
+        inputValue={inputValue}
+        handleInputChange={handleInputChange}
+        setError={setError}
+        number={number}
         />
       </div>
     </div>
