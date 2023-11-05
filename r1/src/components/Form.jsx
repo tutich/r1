@@ -1,17 +1,21 @@
 import complete from '../components/images/icon-complete.svg';
 
-function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, error, handleInputChange,number}) {
+function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, error, handleInputChange,setNumber, number, handleInputChange1, handleInputChange2}) {
     return(
         <div className="form">
             {!isHidden &&<><div className="inputs">
                 <div class="inp">
                     <label htmlFor='name'>CARDHOLDER NAME</label>
-                    <input name="cardholder" type='text' placeholder='e.g. Jane Appleseed' value={inputValue} onChange={handleInputChange}/>
+                    <input name="cardholder" type='text' placeholder='e.g. Jane Appleseed' value={inputValue} onChange={handleInputChange} onInput={handleInputChange1}/>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div>
                 <div class="inp">
                     <label htmlFor='name'>CARD NUMBER</label>
-                    <input name='cardholder' type='text' placeholder='e.g. 1234 5678 9123 0000' value={number} onChange={handleInputChange} />
+                    <input name='cardholder' type='text' placeholder='e.g. 1234 5678 9123 0000' value={number
+                      .replace(/\s/g, "")
+                      .replace(/(\d{4})/g, "$1 ")
+                      .trim()}
+                    onChange={(e) => setNumber(e.target.value)} onChange={handleInputChange} onInput={handleInputChange2} />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div>
                 <div class="inp">
@@ -35,6 +39,7 @@ function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, error, han
                 </div>
             </div><div className="btn">
                     <button onClick={handleConfirmClick}>Confirm</button>
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div></>}
 
           {isHidden ? (<div className="feedback">

@@ -13,11 +13,25 @@ function App() {
  const [inputValue, setInputValue] = useState('');
  const [error, setError] = useState('');
 
+ const handleInputChange1 = (e) => {
+  setInputValue(e.target.value);
+};
+
+const handleInputChange2 = (e) => {
+  setNumber(e.target.value);
+  
+};
+
 
  const handleInputChange = (e) => {
   const value = e.target.value;
-  setInputValue(value);
-  setNumber(value);
+ 
+  
+
+  if (value === inputValue) {
+    setInputValue('');
+  }
+  
 
   
   if (value.trim() === '') {
@@ -26,8 +40,10 @@ function App() {
     setError('');
   }
 };
- const handleConfirmClick = () => {
+ const handleConfirmClick = (e) => {
   setIsHidden(true);
+  e.preventDefault()
+  
  };
 
   return (
@@ -44,6 +60,8 @@ function App() {
         handleInputChange={handleInputChange}
         setError={setError}
         number={number}
+        handleInputChange1={handleInputChange1}
+        handleInputChange2={handleInputChange2}
         />
       </div>
     </div>
