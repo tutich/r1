@@ -17,7 +17,7 @@ function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, setInputVa
                       .replace(/(\d{4})/g, "$1 ")
                       .trim()}
                     onChange={(e) => setNumber(e.target.value)}  onInput={handleInputChange2} />
-                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                    {error && <p style={{ color: 'red' }}>Wrong format, numbers only</p>}
                 </div>
                 <div class="inp">
                     <div class="inps">
