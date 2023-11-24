@@ -200,9 +200,11 @@ li {
 
 @media screen and(max-width: 768px) {
   .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-   
+    display: block;
+  
+  }
+  .img {
+    display: flex;
+    flex-direction: column;
   }
 }

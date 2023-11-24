@@ -38,9 +38,10 @@ function Form({handleConfirmClick, isHidden, setIsHidden, inputValue, setInputVa
                         </div>
                     </div>
                 </div>
-            </div><div className="btn">
+            </div>
+                <div className="btn">
                     <button onClick={handleConfirmClick}>Confirm</button>
-                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                    {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
                 </div></>}
 
           {isHidden ? (<div className="feedback">
